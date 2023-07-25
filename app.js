@@ -45,7 +45,7 @@ render();
 
 // При нажатии на кнопку .btn происходит рендер нового элемента <li>, а также очищаются поля ввода
 btn.addEventListener('click', () => {
-   if (input.value.length === 0) {
+   if (input.value.trim() === '') {
       input.setAttribute('placeholder', 'НЕВОЗМОЖНО ВВЕСТИ ПУСТУЮ СТРОКУ');
       return;
    }

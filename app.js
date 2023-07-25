@@ -23,7 +23,7 @@ function getNoteTemplate(note, index) {
       <span class="note-item-text ${note.completed ? "completed" : ""}">${note.title}</span>
       <div class="note-item-action">
          <div class="note-btn-complete ${note.completed ? "active" : ""}" id="complete" data-index="${index}">&#10004;</div>
-         <div class="note-btn-delete" id="delete">&#10006;</div>
+         <div class="note-btn-delete" id="delete" data-index="${index}">&#10006;</div>
       </div>
    </li>`
 }
@@ -55,13 +55,16 @@ btn.addEventListener('click', () => {
    render();
 });
 
+// Делегируем прослушку на родителя - список <ul>, все дочерние элементы получают прослушку
 list.addEventListener('click', event => {
-   const index = Number.parseInt(event.target.dataset.index, 10);
    if (event.target.dataset.index) {
-      notes[index].completed = !notes[index].completed;
+      const index = Number.parseInt(event.target.dataset.index, 10);
+      console.log(index);
+      if (event.target.getAttribute("id") === "complete") {
+         notes[index].completed = !notes[index].completed;
+      } else if (event.target.getAttribute("id") === "delete") {
+         notes.splice(index, 1);
+      }
+      render();
    }
-   if (event.target.getAttribute("id") === "delete") {
-      notes.splice(index, 1);
-   }
-   render();
 })

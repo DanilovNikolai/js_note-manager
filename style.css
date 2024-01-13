@@ -1,193 +1,242 @@
 /* CSS reset */
 * {
-   padding: 0px;
-   margin: 0px;
-   border: 0px; 
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
 }
 
- *, *:before, *:after {
-   -webkit-box-sizing: border-box;
-   box-sizing: border-box;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input::-ms-clear {
-   display: none;
+  display: none;
 }
 
 button {
-   cursor: pointer;
+  cursor: pointer;
 }
 
 button::-moz-focus-inner {
-   padding: 0;
-   border: 0;
+  padding: 0;
+  border: 0;
 }
 
-a, a:visited {
-   text-decoration: none;
+a,
+a:visited {
+  text-decoration: none;
 }
 
 a:hover {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 ul li {
-   list-style: none;
+  list-style: none;
 }
 
 body {
-   font-family: 'Courier New', Courier, monospace;
-   background-color: #3b3b3b;
-   color: #fff;
-   margin: auto;
-   box-sizing: border-box;
-   min-width: 750px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #3b3b3b;
+  color: #fff;
+  margin: auto;
+  box-sizing: border-box;
+  height: 80vh;
+  width: 70%;
+  @media (max-width: 700px) {
+    width: 80%;
+  }
+  @media (max-width: 500px) {
+    width: 95%;
+  }
 }
 
 .wrapper {
-   min-height: 100%;
-   overflow: hidden;
-   margin: 0px 20px 0px 20px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 700px) {
+    padding: 0px 10px 0px 10px;
+  }
 }
 
 .container {
-   margin: 50px 0px 0px 0px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   min-width: 700px;
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .notes-title {
-   font-size: 30px;
-   font-weight: 600;
-   @media (max-width: 450px) {
-      font-size: 50px;
-      line-height: 40px;
-   }
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .notes-input {
-   padding: 0px 10px 0px 10px;
-   color: #3b3b3b;
-   font-size: 15px;
-   font-weight: 400;
-   min-width: 400px;
-   line-height: 30px;
-   margin: 10px 0px 20px 0px;
-   border-radius: 5px;
-   @media (max-width: 450px) {
-      font-size: 20px;
-      line-height: 40px;
-   }
+  padding: 5px 10px 5px 10px;
+  color: #3b3b3b;
+  font-size: 15px;
+  width: 50%;
+  line-height: 30px;
+  margin: 10px 0px 20px 0px;
+  border-radius: 5px;
+  @media (max-width: 700px) {
+    width: 70%;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+    padding: 4px 7px;
+  }
 }
 
 .notes-btn {
-   font-family: 'Courier New', Courier, monospace;
-   font-size: 20px;
-   font-weight: 700;
-   padding: 0px 10px 0px 10px;
-   background-color: yellowgreen;
-   border-radius: 5px;
-   color: #3b3b3b;
-   line-height: 30px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0px 10px 0px 10px;
+  background-color: yellowgreen;
+  border-radius: 5px;
+  color: #3b3b3b;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .notes-btn:hover {
-   color: #fff;
+  color: #fff;
 }
 
 .notes-list-title {
-   margin: 100px 0px 0px 0px;
-   font-size: 30px;
-   font-weight: 700;
-   @media (max-width: 450px) {
-      margin: 40px 0px 0px 0px;
-      font-size: 40px;
-      font-weight: 700;
-   }
+  margin: 100px 0px 0px 0px;
+  font-size: 30px;
+  font-weight: 700;
+  @media (max-width: 700px) {
+    margin-top: 50px;
+    font-size: 26px;
+  }
+  @media (max-width: 500px) {
+    margin-top: 20px;
+    font-size: 22px;
+  }
 }
 
 .notes-list {
-   line-height: 50px;
-   color: #3b3b3b;
-   width: 100%;
-   @media (max-width: 450px) {
-      width: 90%;
-   }
+  line-height: 50px;
+  color: #3b3b3b;
+  width: 100%;
 }
 
 .note-item {
-   display: flex;
-   justify-content: space-between;
-   border-radius: 5px;
-   padding: 0px 10px 0px 10px;
-   margin: 7px 0px 0px 0px;
-   background-color: #fff;
-   @media (max-width: 450px) {
-      font-size: 20px;
-      line-height: 50px;
-   }
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  margin: 7px 0px 0px 0px;
+  background-color: #fff;
 }
 
 .note-item-action {
-   margin: 0px 10px 0px 0px;
-   color: #fff;
-   display: flex;
-   align-items: center;
-   font-size: 15px;
+  margin: 0px 10px 0px 0px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
 }
 
 .note-btn-complete {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: green;
-   width: 40px;
-   height: 40px;
-   border-radius: 5px;
-   margin: 0px 10px 0px 0px;
-   opacity: 0.7;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0px 10px 0px 0px;
+  opacity: 0.7;
+  @media (max-width: 700px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.note-btn-complete span {
+  z-index: -1;
+  @media (max-width: 700px) {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 6px;
+  }
 }
 
 .note-btn-complete.active {
-   background-color: yellow;
-   color: #000;
+  background-color: yellow;
+  color: #000;
 }
 
 .note-btn-complete:hover {
-   opacity: 1;
-   cursor: pointer;
-   font-size: 20px;
-   font-weight: 700;
+  opacity: 1;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 }
 
 .note-btn-delete {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: red;
-   width: 40px;
-   height: 40px;
-   border-radius: 5px;
-   opacity: 0.7;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  opacity: 0.7;
+
+  @media (max-width: 700px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.note-btn-delete span {
+  z-index: -1;
+  @media (max-width: 700px) {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 6px;
+  }
 }
 
 .note-btn-delete:hover {
-   opacity: 1;
-   cursor: pointer;
-   font-size: 20px;
-   font-weight: 700;
+  opacity: 1;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 }
 
 .note-item-text.completed {
-   text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.note-item-text {
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
 }

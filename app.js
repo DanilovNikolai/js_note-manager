@@ -6,14 +6,14 @@ const list = document.querySelector("#list");
 const task = document.querySelector("#task");
 const listTitle = document.querySelector(".notes-list-title");
 const notes = [
-  {
-    title: "Изучить React",
-    completed: false,
-  },
-  {
-    title: "Изучить TypeScript",
-    completed: false,
-  },
+   {
+      title: 'Изучить React',
+      completed: false
+   }, 
+   {
+      title: 'Изучить TypeScript',
+      completed: false
+   }
 ];
 
 // Функция возвращает HTML с элементом <li>
@@ -60,15 +60,15 @@ btn.addEventListener("click", () => {
 });
 
 // Делегируем прослушку на родителя - список <ul>, все дочерние элементы получают прослушку
-list.addEventListener("click", (event) => {
-  if (event.target.dataset.index) {
-    const index = Number.parseInt(event.target.dataset.index, 10);
-    console.log(index);
-    if (event.target.getAttribute("id") === "complete") {
-      notes[index].completed = !notes[index].completed;
-    } else if (event.target.getAttribute("id") === "delete") {
-      notes.splice(index, 1);
-    }
-    render();
-  }
-});
+list.addEventListener('click', event => {
+   if (event.target.dataset.index) {
+      const index = Number.parseInt(event.target.dataset.index, 10);
+      console.log(index);
+      if (event.target.getAttribute("id") === "complete") {
+         notes[index].completed = !notes[index].completed;
+      } else if (event.target.getAttribute("id") === "delete") {
+         notes.splice(index, 1);
+      }
+      render();
+   }
+})

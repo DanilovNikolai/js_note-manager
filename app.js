@@ -7,11 +7,11 @@ const task = document.querySelector('#task');
 const listTitle = document.querySelector('.notes-list-title');
 const notes = [
    {
-      title: 'Дать по щечке бубуину',
+      title: 'Изучить React',
       completed: false
    }, 
    {
-      title: 'Хряпнуть пивка',
+      title: 'Изучить TypeScript',
       completed: false
    }
 ];
